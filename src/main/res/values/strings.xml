@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Autoškola</string>
+    <string name="action_settings">Nastavenia</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_page_label">@string/app_name</string>
+    <string name="question_label">Test - Otázka</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="result">Výsledok</string>
+
+    <string name="lorem_question">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+    </string>
+
+    <string name="lorem_answer">
+        Lorem ipsum dolor sit amet.
+    </string>
+</resources>
