@@ -6,7 +6,7 @@
 
         <variable
             name="question"
-            type="sk.uniza.fri.autoskola.Question.QuestionInfo"/>
+            type="sk.uniza.fri.autoskola.Question"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif"
             android:paddingHorizontal="15dp"
-            android:text="@{question.question}"
+            android:text="@{question.currentQuestion.question}"
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,44 +39,48 @@
                 android:id="@+id/buttonA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{question.answers[0]}"
+                android:text="@{question.currentQuestion.answers[0]}"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:contentDescription="nieco"
+                android:contentDescription="@string/button_description"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> question.selectAnswer(0)}"/>
 
             <Button
                 android:id="@+id/buttonB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@{question.answers[1]}"
-                android:contentDescription="nieco"
+                android:text="@{question.currentQuestion.answers[1]}"
+                android:contentDescription="@string/button_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonA" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonA"
+                android:onClick="@{() -> question.selectAnswer(1)}"/>
 
             <Button
                 android:id="@+id/buttonC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@{question.answers[2]}"
-                android:contentDescription="nieco"
+                android:text="@{question.currentQuestion.answers[2]}"
+                android:contentDescription="@string/button_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonB" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonB"
+                android:onClick="@{() -> question.selectAnswer(2)}"/>
 
             <Button
                 android:id="@+id/buttonD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@{question.answers[3]}"
-                android:contentDescription="nieco"
+                android:text="@{question.currentQuestion.answers[3]}"
+                android:contentDescription="@string/button_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonC" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonC"
+                android:onClick="@{() -> question.selectAnswer(3)}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -11,16 +11,16 @@
         android:label="@string/main_page_label"
         tools:layout="@layout/main_page">
         <action
-            android:id="@+id/action_MainPage_to_Question"
-            app:destination="@id/Question" />
+            android:id="@+id/action_MainPage_to_test"
+            app:destination="@id/test" />
     </fragment>
     <fragment
-        android:id="@+id/Question"
-        android:name="sk.uniza.fri.autoskola.Question"
-        android:label="@string/question_label"
-        tools:layout="@layout/question">
+        android:id="@+id/test"
+        android:name="sk.uniza.fri.autoskola.Test"
+        android:label="test"
+        tools:layout="@layout/test" >
         <action
-            android:id="@+id/action_Question_to_MainPage"
+            android:id="@+id/action_test_to_MainPage"
             app:destination="@id/MainPage" />
     </fragment>
 </navigation>

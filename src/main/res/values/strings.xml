@@ -7,6 +7,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="result">Výsledok</string>
+    <string name="button_description">Tlačidlo odvovede</string>
 
     <string name="lorem_question">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit?
