@@ -18,10 +18,12 @@ class Result : Fragment() {
     // onDestroyView.
     private var _binding: TestResultBinding? = null
     private val binding get() = _binding!!
-    private val _parent get() = ((parentFragment as NavHostFragment).parentFragment as Test)
+    private val _parent get() = (parentFragment as Test)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = DataBindingUtil.inflate<TestResultBinding>(inflater, R.layout.test_result, container, false)
+
+        _binding!!.test = _parent
 
         return binding.root
     }

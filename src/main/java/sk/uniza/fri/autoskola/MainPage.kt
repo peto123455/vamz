@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import sk.uniza.fri.autoskola.databinding.MainPageBinding
 
@@ -27,6 +28,8 @@ class MainPage : Fragment() {
         binding.startTestButton.setOnClickListener {
             findNavController().navigate(R.id.action_MainPage_to_test)
         }
+
+        childFragmentManager.beginTransaction().replace(R.id.tests_frame, MainPageResults()).commit()
     }
 
     override fun onDestroyView() {

@@ -12,7 +12,7 @@ import sk.uniza.fri.autoskola.databinding.TestBinding
 
 
 class Test : Fragment() {
-    data class QuestionInfo(val question : String, val answers : List<String>, val correct : Int)
+    data class QuestionInfo(val question : String, val answers : List<String>, val correct : Int, val points: Int = 1)
 
     private val _questions: MutableList<QuestionInfo> = mutableListOf(
         QuestionInfo(question = "Čo je križovatka ?",
@@ -30,14 +30,17 @@ class Test : Fragment() {
     // onDestroyView.
     private var _binding: TestBinding? = null
     private var _answered: Int = 0
+    private var _answeredCorrectly: Int = 0
     private var _points: Int = 0
 
     private val binding get() = _binding!!
     val answered get() = _answered
+    val answeredCorrectly get() = _answeredCorrectly
     val points get() = _points
     val questions get() = _questions
 
     fun addPoints(points: Int) {
+        ++_answeredCorrectly;
         _points += points;
     }
 
@@ -48,10 +51,7 @@ class Test : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = TestBinding.inflate(inflater, container, false)
 
-        val manager: FragmentManager = childFragmentManager
-        val transaction: FragmentTransaction = manager.beginTransaction()
-        transaction.add(R.id.testholder, Question())
-        transaction.commit()
+        childFragmentManager.beginTransaction().add(R.id.testholder, Question()).commit()
 
         return binding.root
     }
@@ -66,12 +66,22 @@ class Test : Fragment() {
     }
 
     fun getScoreText(): String {
-        return String.format("%d/%d", points, 55)
+        return String.format("Správne: %d/%d\nBody: %d/%d", _answeredCorrectly, questions.size, points, getMaxPoints())
+    }
+
+    fun getMaxPoints(): Int {
+        var total = 0;
+
+        for (question in questions) {
+            total += question.points;
+        }
+
+        return total
     }
 
     fun finish() {
         val result = Result();
 
-        childFragmentManager.beginTransaction().replace(R.id.testholder, result).addToBackStack(null).commit()
+        childFragmentManager.beginTransaction().replace(R.id.testholder, result).commit()
     }
 }

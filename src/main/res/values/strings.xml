@@ -16,4 +16,6 @@
     <string name="lorem_answer">
         Lorem ipsum dolor sit amet.
     </string>
+    <string name="lorem_itemname">Výsledok 100/100</string>
+    <string name="lorem_date">11.6.2023 17:00</string>
 </resources>

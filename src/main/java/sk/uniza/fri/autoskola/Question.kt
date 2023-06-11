@@ -34,13 +34,16 @@ class Question : Fragment() {
     }
 
     fun selectAnswer(index: Int) {
-        if (_parent.questions.size < _parent.answered + 2 || _currentQuestion == null) {
+        if (_currentQuestion == null) return
+
+        _parent.answered()
+        if (index == _currentQuestion!!.correct) _parent.addPoints(_currentQuestion!!.points);
+
+        if (_parent.questions.size < _parent.answered + 1) {
+            _currentQuestion = null;
             _parent.finish()
             return
         }
-
-        _parent.answered()
-        if (index == _currentQuestion!!.correct) _parent.addPoints(1);
 
         _currentQuestion = _parent.questions[_parent.answered]
         _binding!!.invalidateAll()
