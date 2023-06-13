@@ -10,6 +10,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import sk.uniza.fri.autoskola.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

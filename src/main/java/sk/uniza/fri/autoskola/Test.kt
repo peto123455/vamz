@@ -8,7 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import sk.uniza.fri.autoskola.databinding.TestBinding
+import java.time.LocalDateTime
+import java.util.Date
 
 
 class Test : Fragment() {
@@ -81,6 +85,14 @@ class Test : Fragment() {
 
     fun finish() {
         val result = Result();
+
+        val db = TestResultDatabase.getDB(requireContext())
+
+        runBlocking {
+            launch {
+                TestResultDatabase.getDB(requireContext()).dao.upsertResult(TestResult(_points, 100, LocalDateTime.now().toString(), true))
+            }
+        }
 
         childFragmentManager.beginTransaction().replace(R.id.testholder, result).commit()
     }
