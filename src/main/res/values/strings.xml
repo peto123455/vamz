@@ -3,7 +3,7 @@
     <string name="action_settings">Nastavenia</string>
     <!-- Strings used for fragments for navigation -->
     <string name="main_page_label">@string/app_name</string>
-    <string name="question_label">Test - Otázka</string>
+    <string name="question_label">Skúška</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="result">Výsledok</string>
@@ -18,4 +18,6 @@
     </string>
     <string name="lorem_itemname">Výsledok 100/100</string>
     <string name="lorem_date">11.6.2023 17:00</string>
+    <string name="nextQuestion">Ďalšia otázka</string>
+    <string name="timer_placeholder">30:00</string>
 </resources>

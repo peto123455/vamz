@@ -15,11 +15,44 @@
         android:layout_height="match_parent"
         tools:context=".TestQuestion">
 
+        <RelativeLayout
+            android:id="@+id/linearLayoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingHorizontal="15dp"
+                android:text="@{question.numberString}"
+                android:textSize="24sp"
+                android:gravity="start"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/question_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingHorizontal="15dp"
+                android:text="@string/timer_placeholder"
+                android:textSize="24sp"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/question_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="sans-serif"
             android:paddingHorizontal="15dp"
             android:text="@{question.currentQuestion.question}"
@@ -27,13 +60,13 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
 
         <ImageView
             android:id="@+id/questionImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/question_title"
@@ -43,17 +76,18 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_title">
+            app:layout_constraintStart_toStartOf="parent">
 
             <Button
                 android:id="@+id/buttonA"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
                 android:contentDescription="@string/button_description"
                 android:onClick="@{() -> question.selectAnswer(1)}"
                 android:text="@{question.currentQuestion.answer1}"
@@ -63,8 +97,9 @@
 
             <Button
                 android:id="@+id/buttonB"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
                 android:contentDescription="@string/button_description"
                 android:onClick="@{() -> question.selectAnswer(2)}"
                 android:text="@{question.currentQuestion.answer2}"
@@ -74,11 +109,26 @@
 
             <Button
                 android:id="@+id/buttonC"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="15dp"
                 android:contentDescription="@string/button_description"
                 android:onClick="@{() -> question.selectAnswer(3)}"
                 android:text="@{question.currentQuestion.answer3}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonB" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:contentDescription="@string/button_description"
+                android:enabled="false"
+                android:onClick="@{() -> question.nextQuestion()}"
+                android:text="@string/nextQuestion"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonB" />
