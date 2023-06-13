@@ -7,13 +7,13 @@
 
         <variable
             name="question"
-            type="sk.uniza.fri.autoskola.Question"/>
+            type="sk.uniza.fri.autoskola.TestQuestion"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Question">
+        tools:context=".TestQuestion">
 
         <TextView
             android:id="@+id/question_title"
@@ -29,23 +29,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/questionImage"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/question_title"
+            app:srcCompat="@drawable/jiscd" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_title">
 
             <Button
                 android:id="@+id/buttonA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(0)}"
-                android:text="@{question.currentQuestion.answers[0]}"
+                android:onClick="@{() -> question.selectAnswer(1)}"
+                android:text="@{question.currentQuestion.answer1}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -55,8 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(1)}"
-                android:text="@{question.currentQuestion.answers[1]}"
+                android:onClick="@{() -> question.selectAnswer(2)}"
+                android:text="@{question.currentQuestion.answer2}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonA" />
@@ -66,22 +77,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(2)}"
-                android:text="@{question.currentQuestion.answers[2]}"
+                android:onClick="@{() -> question.selectAnswer(3)}"
+                android:text="@{question.currentQuestion.answer3}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonB" />
-
-            <Button
-                android:id="@+id/buttonD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(3)}"
-                android:text="@{question.currentQuestion.answers[3]}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonC" />
 
         </LinearLayout>
 

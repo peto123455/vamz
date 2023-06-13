@@ -1,34 +1,21 @@
 package sk.uniza.fri.autoskola
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import sk.uniza.fri.autoskola.databinding.TestBinding
 import java.time.LocalDateTime
-import java.util.Date
 
 
 class Test : Fragment() {
-    data class QuestionInfo(val question : String, val answers : List<String>, val correct : Int, val points: Int = 1)
+    //data class QuestionInfo(val question : String, val answers : List<String>, val correct : Int, val points: Int = 1)
 
-    private val _questions: MutableList<QuestionInfo> = mutableListOf(
-        QuestionInfo(question = "Čo je križovatka ?",
-            answers = listOf("Spájanie ciest", "Niečo", "Niečo", "Niečo"),
-            correct = 0),
-        QuestionInfo(question = "Čo je to zastavenie vozidla ?",
-            answers = listOf("Niečo", "Zastavenie nezávislé od vodiča.", "Niečo", "Niečo"),
-            correct = 1),
-        QuestionInfo(question = "Test ?",
-            answers = listOf("Niečo", "Niečo", "Ano", "Niečo"),
-            correct = 2)
-    )
+    private val _questions: MutableList<Questions.Question> = ArrayList()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -55,9 +42,16 @@ class Test : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = TestBinding.inflate(inflater, container, false)
 
-        childFragmentManager.beginTransaction().add(R.id.testholder, Question()).commit()
+        startTest()
+
+        childFragmentManager.beginTransaction().add(R.id.testholder, TestQuestion()).commit()
 
         return binding.root
+    }
+
+    fun startTest() {
+        _questions.clear()
+        _questions.addAll((activity as MainActivity).generateQuestions)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -77,7 +71,7 @@ class Test : Fragment() {
         var total = 0;
 
         for (question in questions) {
-            total += question.points;
+            total += question.category.points;
         }
 
         return total
