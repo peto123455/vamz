@@ -1,7 +1,6 @@
 package sk.uniza.fri.autoskola
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +16,7 @@ import sk.uniza.fri.autoskola.databinding.TestBinding
 import java.time.LocalDateTime
 
 
-class Test : Fragment() {
+class TestFragment : Fragment() {
     //data class QuestionInfo(val question : String, val answers : List<String>, val correct : Int, val points: Int = 1)
 
     private val _questions: MutableList<Questions.Question> = ArrayList()
@@ -55,7 +54,7 @@ class Test : Fragment() {
 
         testInit()
 
-        childFragmentManager.beginTransaction().add(R.id.testholder, TestQuestion()).commit()
+        childFragmentManager.beginTransaction().add(R.id.testholder, TestQuestionFragment()).commit()
 
         _callback = object: OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -72,9 +71,9 @@ class Test : Fragment() {
         AlertDialog.Builder(context)
             .setMessage("Naozaj chceš ukončiť test?")
             .setCancelable(false)
-            .setPositiveButton("Áno",
-                DialogInterface.OnClickListener { _, _ -> handleBackButton() })
-            .setNegativeButton("Nie", null)
+            .setPositiveButton("Áno") {
+                _, _ -> handleBackButton()
+            }.setNegativeButton("Nie", null)
             .show()
     }
 
@@ -128,7 +127,7 @@ class Test : Fragment() {
     fun finish() {
         (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         _callback.isEnabled = false
-        val result = TestResult()
+        val result = TestResultFragment()
 
         runBlocking {
             launch {

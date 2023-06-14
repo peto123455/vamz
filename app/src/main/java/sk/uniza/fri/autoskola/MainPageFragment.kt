@@ -1,20 +1,16 @@
 package sk.uniza.fri.autoskola
 
 import android.app.AlertDialog
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import sk.uniza.fri.autoskola.data.Questions
 import sk.uniza.fri.autoskola.databinding.MainPageBinding
 
 
-class MainPage : Fragment() {
+class MainPageFragment : Fragment() {
 
     private var _binding: MainPageBinding? = null
 
@@ -49,7 +45,7 @@ class MainPage : Fragment() {
             builder.show()
         }
 
-        childFragmentManager.beginTransaction().replace(R.id.tests_frame, MainPageResults()).commit()
+        childFragmentManager.beginTransaction().replace(R.id.tests_frame, MainPageResultsFragment()).commit()
     }
 
     override fun onDestroyView() {

@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Autoskola"
         tools:targetApi="31">
         <activity
-            android:name=".BasicDefinitions"
+            android:name=".BasicDefinitionsActivity"
             android:exported="true"
             android:label="@string/title_activity_basic_definitions"
             android:theme="@style/Theme.Autoskola.NoActionBar" />

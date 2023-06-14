@@ -7,13 +7,13 @@
 
         <variable
             name="question"
-            type="sk.uniza.fri.autoskola.TestQuestion"/>
+            type="sk.uniza.fri.autoskola.TestQuestionFragment"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TestQuestion">
+        tools:context=".TestQuestionFragment">
 
         <RelativeLayout
             android:id="@+id/linearLayoutTop"
@@ -142,7 +142,7 @@
                     android:contentDescription="@string/button_description"
                     android:enabled="false"
                     android:onClick="@{() -> question.nextQuestion()}"
-                    android:text="@string/nextQuestion"
+                    android:text="@{question.nextQuestionString()}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/buttonB"

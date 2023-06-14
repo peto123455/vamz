@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/MainPage"
-        android:name="sk.uniza.fri.autoskola.MainPage"
+        android:name="sk.uniza.fri.autoskola.MainPageFragment"
         android:label="@string/main_page_label"
         tools:layout="@layout/main_page">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/test"
-        android:name="sk.uniza.fri.autoskola.Test"
+        android:name="sk.uniza.fri.autoskola.TestFragment"
         android:label="@string/question_label"
         tools:layout="@layout/test" >
         <action

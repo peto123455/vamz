@@ -9,11 +9,11 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import sk.uniza.fri.autoskola.databinding.TestResultBinding
 
-class TestResult : Fragment() {
+class TestResultFragment : Fragment() {
 
     private var _binding: TestResultBinding? = null
     private val binding get() = _binding!!
-    private val _parent get() = (parentFragment as Test)
+    private val _parent get() = (parentFragment as TestFragment)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = DataBindingUtil.inflate(inflater,

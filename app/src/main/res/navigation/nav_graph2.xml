@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/about2"
-        android:name="sk.uniza.fri.autoskola.About"
+        android:name="sk.uniza.fri.autoskola.AboutFragment"
         android:label="@string/app_info" >
         <action
             android:id="@+id/action_about2_to_FirstFragment"

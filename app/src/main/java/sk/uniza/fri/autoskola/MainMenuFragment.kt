@@ -39,7 +39,7 @@ class MainMenuFragment : Fragment() {
         }
 
         binding.materialsButton.setOnClickListener {
-            val myIntent = Intent(context, BasicDefinitions::class.java)
+            val myIntent = Intent(context, BasicDefinitionsActivity::class.java)
             startActivity(myIntent)
         }
     }

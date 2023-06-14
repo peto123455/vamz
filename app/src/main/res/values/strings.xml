@@ -12,6 +12,7 @@
     <string name="lorem_itemname">Výsledok 100/100</string>
     <string name="lorem_date">11.6.2023 17:00</string>
     <string name="nextQuestion">Ďalšia otázka</string>
+    <string name="endTest">Ukončiť test</string>
     <string name="timer_placeholder">30:00</string>
     <string name="result_delete_button_description">Zmazať výsledok</string>
     <string name="result_image_description">Obrázok výsledku</string>

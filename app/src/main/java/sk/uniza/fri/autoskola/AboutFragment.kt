@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import sk.uniza.fri.autoskola.databinding.AboutBinding
 
-class About : Fragment() {
+class AboutFragment : Fragment() {
 
     private var _binding: AboutBinding? = null
 

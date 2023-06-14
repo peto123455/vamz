@@ -11,14 +11,14 @@ import androidx.databinding.DataBindingUtil
 import sk.uniza.fri.autoskola.data.Questions
 import sk.uniza.fri.autoskola.databinding.TestQuestionBinding
 
-class TestQuestion : Fragment() {
+class TestQuestionFragment : Fragment() {
 
     private var _binding: TestQuestionBinding? = null
     private var _currentQuestion: Questions.Question? = null
     private var _timer: CountDownTimer? = null
     private val binding get() = _binding!!
     val currentQuestion get() = _currentQuestion!!
-    private val _parent get() = (parentFragment as Test)
+    private val _parent get() = (parentFragment as TestFragment)
 
     private var answered = false
 
@@ -67,7 +67,17 @@ class TestQuestion : Fragment() {
             _binding!!.questionImage.setImageResource(activity?.resources!!.getIdentifier(_currentQuestion!!.image, "drawable", activity?.packageName))
             _binding!!.questionImage.visibility = View.VISIBLE
         }
+
         _binding!!.invalidateAll()
+    }
+
+    /**
+     * Returns text for Next Question button
+     * @param index Next question string
+     */
+    fun nextQuestionString(): String {
+        if (_parent.questions.size <= _parent.answered + 1) return getString(R.string.endTest)
+        return getString(R.string.nextQuestion)
     }
 
     /**

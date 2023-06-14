@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import sk.uniza.fri.autoskola.data.TestResultDatabase
 import sk.uniza.fri.autoskola.databinding.MainPageResultsBinding
 
-class MainPageResults : Fragment() {
+class MainPageResultsFragment : Fragment() {
 
     //private var _results: MutableList<TestResult> = ArrayList();
     private lateinit var _recyclerView: RecyclerView
