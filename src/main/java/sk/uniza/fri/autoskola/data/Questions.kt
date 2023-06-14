@@ -1,12 +1,7 @@
-package sk.uniza.fri.autoskola
+package sk.uniza.fri.autoskola.data
 
 import android.content.Context
-import androidx.room.Room
-import com.google.gson.Gson
-import com.google.gson.JsonElement
-import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import com.google.gson.stream.JsonReader
 import java.io.InputStreamReader
 import kotlin.random.Random
 
@@ -25,6 +20,10 @@ class Questions() {
 
     val categories get() = _categories
 
+    /**
+     * Loads all the questions from json "data.json"
+     * @param context Context
+     */
     fun loadJson(context: Context) {
 
         try {
@@ -52,6 +51,10 @@ class Questions() {
         }
     }
 
+    /**
+     * Returns generated questions
+     * @return Generated questions
+     */
     fun generateQuestions(): MutableList<Question> {
         val list: MutableList<Question> = ArrayList()
 

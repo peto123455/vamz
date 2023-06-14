@@ -1,4 +1,4 @@
-package sk.uniza.fri.autoskola
+package sk.uniza.fri.autoskola.data
 
 import android.content.Context
 import androidx.room.Database
@@ -17,6 +17,10 @@ abstract class TestResultDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE : TestResultDatabase? = null
 
+        /**
+         * Returns DB
+         * @return DB
+         */
         fun getDB(context: Context): TestResultDatabase {
             val tmp = INSTANCE
             if (INSTANCE != null) {

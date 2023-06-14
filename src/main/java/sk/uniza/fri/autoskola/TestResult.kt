@@ -1,32 +1,30 @@
 package sk.uniza.fri.autoskola
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.time.LocalDateTime
-import java.util.Date
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import sk.uniza.fri.autoskola.databinding.TestResultBinding
 
-@Entity
-class TestResult(points: Int, outOf: Int, date: String, successful: Boolean = true) {
-    @PrimaryKey(autoGenerate = true)
-    var id: Int? = null
+class TestResult : Fragment() {
 
-    private var _points: Int = points;
-    private var _outOf: Int = outOf;
-    private var _date: String = date;
-    private var _successful: Boolean = successful;
+    private var _binding: TestResultBinding? = null
+    private val binding get() = _binding!!
+    private val _parent get() = (parentFragment as Test)
 
-    val points get() = _points;
-    val outOf get() = _outOf;
-    val date get() = _date;
-    val successful get() = _successful;
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = DataBindingUtil.inflate(inflater,
+            R.layout.test_result, container, false)
 
-    companion object {
-        fun toDate(dateString: String): LocalDateTime {
-            return LocalDateTime.parse(dateString)
-        }
+        _binding!!.test = _parent
 
-        fun fromDate(date: LocalDateTime): String {
-            return date.toString()
-        }
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

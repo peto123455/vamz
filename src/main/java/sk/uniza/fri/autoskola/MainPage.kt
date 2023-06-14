@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import sk.uniza.fri.autoskola.databinding.MainPageBinding
 
@@ -13,11 +12,9 @@ class MainPage : Fragment() {
 
     private var _binding: MainPageBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = MainPageBinding.inflate(inflater, container, false)
         return binding.root
     }

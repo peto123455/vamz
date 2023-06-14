@@ -31,9 +31,10 @@
                 android:fontFamily="sans-serif"
                 android:paddingHorizontal="15dp"
                 android:text="@{question.numberString}"
-                android:textSize="24sp"
+                android:textSize="15sp"
                 android:gravity="start"
-                android:layout_alignParentStart="true"/>
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/question_timer"/>
 
             <TextView
                 android:id="@+id/question_timer"
@@ -42,7 +43,7 @@
                 android:fontFamily="sans-serif"
                 android:paddingHorizontal="15dp"
                 android:text="@string/timer_placeholder"
-                android:textSize="24sp"
+                android:textSize="15sp"
                 android:layout_gravity="end"
                 android:layout_alignParentEnd="true"/>
 
@@ -57,7 +58,7 @@
             android:paddingHorizontal="15dp"
             android:text="@{question.currentQuestion.question}"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
@@ -70,70 +71,84 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/question_title"
+            android:contentDescription="@string/test_image_description"
             app:srcCompat="@drawable/jiscd" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <Button
-                android:id="@+id/buttonA"
-                android:layout_width="fill_parent"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(1)}"
-                android:text="@{question.currentQuestion.answer1}"
+                android:layout_marginBottom="40dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="bottom">
 
-            <Button
-                android:id="@+id/buttonB"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(2)}"
-                android:text="@{question.currentQuestion.answer2}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonA" />
+                <Button
+                    android:id="@+id/buttonA"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:contentDescription="@string/button_description"
+                    android:onClick="@{() -> question.selectAnswer(1)}"
+                    android:text="@{question.currentQuestion.answer1}"
+                    android:textSize="12sp"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
-            <Button
-                android:id="@+id/buttonC"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="15dp"
-                android:contentDescription="@string/button_description"
-                android:onClick="@{() -> question.selectAnswer(3)}"
-                android:text="@{question.currentQuestion.answer3}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonB" />
+                <Button
+                    android:id="@+id/buttonB"
+                    android:layout_width="fill_parent"
+                    app:cornerRadius="5dp"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:contentDescription="@string/button_description"
+                    android:onClick="@{() -> question.selectAnswer(2)}"
+                    android:text="@{question.currentQuestion.answer2}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonA"
+                    tools:ignore="VisualLintButtonSize" />
 
-            <Button
-                android:id="@+id/buttonNext"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:contentDescription="@string/button_description"
-                android:enabled="false"
-                android:onClick="@{() -> question.nextQuestion()}"
-                android:text="@string/nextQuestion"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonB" />
+                <Button
+                    android:id="@+id/buttonC"
+                    android:layout_width="fill_parent"
+                    app:cornerRadius="5dp"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:contentDescription="@string/button_description"
+                    android:onClick="@{() -> question.selectAnswer(3)}"
+                    android:text="@{question.currentQuestion.answer3}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonB"
+                    tools:ignore="VisualLintButtonSize" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/buttonNext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="5dp"
+                    android:textSize="12sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:contentDescription="@string/button_description"
+                    android:enabled="false"
+                    android:onClick="@{() -> question.nextQuestion()}"
+                    android:text="@string/nextQuestion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonB"
+                    tools:ignore="VisualLintButtonSize" />
+
+            </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

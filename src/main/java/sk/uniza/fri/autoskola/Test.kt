@@ -1,6 +1,5 @@
 package sk.uniza.fri.autoskola
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import sk.uniza.fri.autoskola.data.Questions
+import sk.uniza.fri.autoskola.data.TestResult
+import sk.uniza.fri.autoskola.data.TestResultDatabase
 import sk.uniza.fri.autoskola.databinding.TestBinding
 import java.time.LocalDateTime
 
@@ -17,45 +19,51 @@ class Test : Fragment() {
 
     private val _questions: MutableList<Questions.Question> = ArrayList()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private var _binding: TestBinding? = null
     private var _answered: Int = 0
     private var _answeredCorrectly: Int = 0
     private var _points: Int = 0
+    private var _minimumPoints: Int = 90
 
     private val binding get() = _binding!!
     val answered get() = _answered
-    val answeredCorrectly get() = _answeredCorrectly
     val points get() = _points
     val questions get() = _questions
 
+    /**
+     * Adds points to the score
+     * @param points The amount of points to be added
+     */
     fun addPoints(points: Int) {
-        ++_answeredCorrectly;
-        _points += points;
+        ++_answeredCorrectly
+        _points += points
     }
 
+    /**
+     * Called when an answer was answered
+     */
     fun answered() {
-        ++_answered;
+        ++_answered
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = TestBinding.inflate(inflater, container, false)
 
-        startTest()
+        testInit()
 
         childFragmentManager.beginTransaction().add(R.id.testholder, TestQuestion()).commit()
 
         return binding.root
     }
 
-    fun startTest() {
+    /**
+     * Initializes the test
+     */
+    private fun testInit() {
         _questions.clear()
         _questions.addAll((activity as MainActivity).generateQuestions)
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        _minimumPoints = (getMaxPoints().toDouble() / 0.9).toInt()
     }
 
     override fun onDestroyView() {
@@ -63,28 +71,37 @@ class Test : Fragment() {
         _binding = null
     }
 
+    /**
+     * Gets a formatted test result string
+     * @return Formatted string
+     */
     fun getScoreText(): String {
         return String.format("Správne: %d/%d\nBody: %d/%d", _answeredCorrectly, questions.size, points, getMaxPoints())
     }
 
-    fun getMaxPoints(): Int {
-        var total = 0;
+    /**
+     * Returns the maximum amount of points possible
+     * @return Max points
+     */
+    private fun getMaxPoints(): Int {
+        var total = 0
 
         for (question in questions) {
-            total += question.category.points;
+            total += question.category.points
         }
 
         return total
     }
 
+    /**
+     * Finishes the test
+     */
     fun finish() {
-        val result = Result();
-
-        val db = TestResultDatabase.getDB(requireContext())
+        val result = TestResult()
 
         runBlocking {
             launch {
-                TestResultDatabase.getDB(requireContext()).dao.upsertResult(TestResult(_points, 100, LocalDateTime.now().toString(), true))
+                TestResultDatabase.getDB(requireContext()).dao.upsertResult(TestResult(_points, getMaxPoints(), TestResult.fromDate(LocalDateTime.now()), points >= _minimumPoints))
             }
         }
 
