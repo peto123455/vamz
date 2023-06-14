@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "sk.uniza.fri.autoskola.app-mergeDebugResources-54:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\peto1\\.gradle\\caches\\transforms-3\\8ee1ed797d6cc28b95d6e33adcbe00e9\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

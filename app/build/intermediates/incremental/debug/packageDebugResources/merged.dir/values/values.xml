@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="babyBlue">#89cff0</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#1434A4</color>
+    <color name="green">#44BF44</color>
+    <color name="red">#E02121</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="fab_margin">16dp</dimen>
+    <string name="app_info">O Aplikácií</string>
+    <string name="app_name">Autoškola</string>
+    <string name="button_description">Tlačidlo odvovede</string>
+    <string name="lorem_date">11.6.2023 17:00</string>
+    <string name="lorem_itemname">Výsledok 100/100</string>
+    <string name="main_page_label">@string/app_name</string>
+    <string name="new_test">Nový test</string>
+    <string name="next">Next</string>
+    <string name="nextQuestion">Ďalšia otázka</string>
+    <string name="previous">Previous</string>
+    <string name="question_label">Skúška</string>
+    <string name="result">Výsledok</string>
+    <string name="result_delete_button_description">Zmazať výsledok</string>
+    <string name="result_image_description">Obrázok výsledku</string>
+    <string name="test_image_description">Obrázok k otázke</string>
+    <string name="timer_placeholder">30:00</string>
+    <style name="Base.Theme.Autoskola" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/blue</item>
+    </style>
+    <style name="Theme.Autoskola" parent="Base.Theme.Autoskola">
+
+    </style>
+</resources>

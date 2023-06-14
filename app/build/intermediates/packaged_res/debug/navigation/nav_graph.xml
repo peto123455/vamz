@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainPage">
+
+    <fragment
+        android:id="@+id/MainPage"
+        android:name="sk.uniza.fri.autoskola.MainPage"
+        android:label="@string/main_page_label"
+        tools:layout="@layout/main_page">
+        <action
+            android:id="@+id/action_MainPage_to_test"
+            app:destination="@id/test" />
+    </fragment>
+    <fragment
+        android:id="@+id/test"
+        android:name="sk.uniza.fri.autoskola.Test"
+        android:label="@string/question_label"
+        tools:layout="@layout/test" >
+        <action
+            android:id="@+id/action_test_to_MainPage"
+            app:destination="@id/MainPage" />
+    </fragment>
+</navigation>

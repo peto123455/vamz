@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\main_page.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\main_page.xml"
+    },
+    {
+        "merged": "sk.uniza.fri.autoskola.app-mergeDebugResources-55:/layout/test_result.xml",
+        "source": "sk.uniza.fri.autoskola.app-main-58:/layout/test_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\main_page_results.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\main_page_results.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\test_question.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\test_question.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\test_result.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\test_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\list_item.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\test.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\test.xml"
+    }
+]
