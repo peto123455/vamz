@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_MainPage_to_test"
             app:destination="@id/test" />
+        <action
+            android:id="@+id/action_MainPage_to_about"
+            app:destination="@id/about" />
     </fragment>
     <fragment
         android:id="@+id/test"
@@ -21,6 +24,14 @@
         tools:layout="@layout/test" >
         <action
             android:id="@+id/action_test_to_MainPage"
+            app:destination="@id/MainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="sk.uniza.fri.autoskola.About"
+        android:label="@string/app_info" >
+        <action
+            android:id="@+id/action_about_to_MainPage"
             app:destination="@id/MainPage" />
     </fragment>
 </navigation>

@@ -1024,6 +1024,10 @@
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\obr3_dz_264.jpg"
     },
     {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\layout_about.xml.flat",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\about.xml"
+    },
+    {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_kr_04.jpg.flat",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\kr_04.jpg"
     },
@@ -2852,12 +2856,12 @@
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\skvza_37430.png"
     },
     {
-        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_sign_522.png.flat",
-        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\sign_522.png"
-    },
-    {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_sign_522.png.flat",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\sign_522.png"
     },
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_obr3_dz_630.jpg.flat",
@@ -2962,10 +2966,6 @@
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_sign_702.png.flat",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\sign_702.png"
-    },
-    {
-        "merged": "sk.uniza.fri.autoskola.app-merged_res-56:/menu_menu_main.xml.flat",
-        "source": "sk.uniza.fri.autoskola.app-main-58:/menu/menu_main.xml"
     },
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_obr3_tvv_24.png.flat",
@@ -3286,6 +3286,10 @@
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_sign_365.png.flat",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\drawable\\sign_365.png"
+    },
+    {
+        "merged": "sk.uniza.fri.autoskola.app-merged_res-56:/layout_about.xml.flat",
+        "source": "sk.uniza.fri.autoskola.app-main-58:/layout/about.xml"
     },
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-merged_res-56:\\drawable_obr3_dz_514.jpg.flat",

@@ -588,7 +588,7 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
-    <color name="babyBlue">#89cff0</color>
+    <color name="babyBlue">#3587AD</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -1612,6 +1612,15 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about_app">
+        Aplikácia je určená hlavne na prípravu študentov autoškoly.
+        Obsahuje oficiálny náhodne generovaný test.
+        Možnosť zamerať sa na ľubovolnú kategóriu.
+        Na úspešne zvládnutie testu je potrebné žískať,
+        aspoň 90%, čiže na oficiálnom test aspoň 90 bodov.
+        Aplikácia obsahuje oficiálne otázky, v oficiálnom
+        usporiadaní, počtu otázok.
+    </string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_info">O Aplikácií</string>
     <string name="app_name">Autoškola</string>
@@ -1631,6 +1640,7 @@
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="image_jiscd_description">Obrázok JISCD</string>
     <string name="item_view_role_description">Tab</string>
     <string name="lorem_date">11.6.2023 17:00</string>
     <string name="lorem_itemname">Výsledok 100/100</string>

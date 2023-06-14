@@ -4,16 +4,20 @@
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\main_page.xml"
     },
     {
-        "merged": "sk.uniza.fri.autoskola.app-mergeDebugResources-55:/layout/test_result.xml",
-        "source": "sk.uniza.fri.autoskola.app-main-58:/layout/test_result.xml"
-    },
-    {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\main_page_results.xml",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\main_page_results.xml"
     },
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\activity_main.xml",
         "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "sk.uniza.fri.autoskola.app-mergeDebugResources-55:/layout/about.xml",
+        "source": "sk.uniza.fri.autoskola.app-main-58:/layout/about.xml"
+    },
+    {
+        "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\about.xml",
+        "source": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-main-58:\\layout\\about.xml"
     },
     {
         "merged": "C:\\Users\\peto1\\.gradle\\daemon\\7.4\\sk.uniza.fri.autoskola.app-mergeDebugResources-55:\\layout\\test_question.xml",

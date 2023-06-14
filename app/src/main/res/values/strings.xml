@@ -17,7 +17,7 @@
     <string name="new_test">Nový test</string>
     <string name="test_image_description">Obrázok k otázke</string>
     <string name="about_app">
-        Aplikácia je určená hlavne na prípravu študentov.
+        Aplikácia je určená hlavne na prípravu študentov autoškoly.
         Obsahuje oficiálny náhodne generovaný test.
         Možnosť zamerať sa na ľubovolnú kategóriu.
         Na úspešne zvládnutie testu je potrebné žískať,
@@ -25,4 +25,5 @@
         Aplikácia obsahuje oficiálne otázky, v oficiálnom
         usporiadaní, počtu otázok.
     </string>
+    <string name="image_jiscd_description">Obrázok JISCD</string>
 </resources>

@@ -31,6 +31,7 @@
         android:theme="@style/Theme.Autoskola" >
         <activity
             android:name="sk.uniza.fri.autoskola.MainActivity"
+            android:configChanges="uiMode"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

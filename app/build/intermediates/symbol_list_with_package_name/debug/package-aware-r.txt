@@ -3400,6 +3400,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id about
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3437,7 +3438,9 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_MainPage_to_about
 id action_MainPage_to_test
+id action_about_to_MainPage
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -3609,6 +3612,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
@@ -3850,6 +3854,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3986,6 +3991,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout about
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -4112,6 +4118,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_app
 string androidx_startup
 string app_info
 string app_name
@@ -4131,6 +4138,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_jiscd_description
 string item_view_role_description
 string lorem_date
 string lorem_itemname

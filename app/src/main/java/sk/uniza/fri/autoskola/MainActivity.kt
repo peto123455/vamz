@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.findNavController
 import sk.uniza.fri.autoskola.data.Questions
 import sk.uniza.fri.autoskola.databinding.ActivityMainBinding
 
@@ -51,15 +52,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.action_MainPage_to_about)
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(_appBarConfiguration)
-                || super.onSupportNavigateUp()
+        return navController.navigateUp(_appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     fun setCategory(value: Int) {
