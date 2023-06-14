@@ -55,18 +55,30 @@ class Questions() {
      * Returns generated questions
      * @return Generated questions
      */
-    fun generateQuestions(): MutableList<Question> {
+    fun generateQuestions(categoryId: Int = -1): MutableList<Question> {
         val list: MutableList<Question> = ArrayList()
 
-        for (category in _categories) {
-            for (i in 0..(category.max-category.min)) {
-                while (true) {
-                    val question = category.questions[Random.nextInt(category.questions.size)]
-                    if (list.contains(question)) continue
+        if (categoryId != -1) {
+            return handleGenerateCategoryQuestions(_categories[categoryId], 9)
+        }
 
-                    list.add(question)
-                    break
-                }
+        for (category in _categories) {
+            list.addAll(handleGenerateCategoryQuestions(category))
+        }
+
+        return list
+    }
+
+    private fun handleGenerateCategoryQuestions(category: Category, size: Int = category.max-category.min): MutableList<Question> {
+        val list: MutableList<Question> = ArrayList()
+
+        for (i in 0..size) {
+            while (true) {
+                val question = category.questions[Random.nextInt(category.questions.size)]
+                if (list.contains(question)) continue
+
+                list.add(question)
+                break
             }
         }
 

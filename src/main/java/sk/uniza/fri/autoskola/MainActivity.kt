@@ -17,12 +17,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var _appBarConfiguration: AppBarConfiguration
     private lateinit var _binding: ActivityMainBinding
     private val _questions = Questions()
+    private var _currentCategory = -1
 
     /**
      * Returns generated questions
      * @return Generated questions
      */
-    val generateQuestions get() = _questions.generateQuestions()
+    val generateQuestions get() = _questions.generateQuestions(_currentCategory)
+    val getCategories get() = _questions.categories
+    val currentCategory get() = _currentCategory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -59,5 +62,8 @@ class MainActivity : AppCompatActivity() {
                 || super.onSupportNavigateUp()
     }
 
+    fun setCategory(value: Int) {
+        _currentCategory = value
+    }
 
 }

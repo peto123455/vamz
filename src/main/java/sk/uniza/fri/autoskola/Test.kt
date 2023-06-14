@@ -1,9 +1,13 @@
 package sk.uniza.fri.autoskola
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -24,6 +28,7 @@ class Test : Fragment() {
     private var _answeredCorrectly: Int = 0
     private var _points: Int = 0
     private var _minimumPoints: Int = 90
+    private lateinit var _callback: OnBackPressedCallback
 
     private val binding get() = _binding!!
     val answered get() = _answered
@@ -53,8 +58,28 @@ class Test : Fragment() {
 
         childFragmentManager.beginTransaction().add(R.id.testholder, TestQuestion()).commit()
 
+        _callback = object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                AlertDialog.Builder(context)
+                    .setMessage("Naozaj chceš ukončiť test?")
+                    .setCancelable(false)
+                    .setPositiveButton("Áno",
+                        DialogInterface.OnClickListener { dialog, id -> handleHackButton() })
+                    .setNegativeButton("Nie", null)
+                    .show()
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(_callback)
+
         return binding.root
     }
+
+    private fun handleHackButton() {
+        finish()
+        _callback.isEnabled = false
+    }
+
 
     /**
      * Initializes the test
@@ -68,6 +93,7 @@ class Test : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _callback.isEnabled = false
         _binding = null
     }
 
@@ -97,14 +123,17 @@ class Test : Fragment() {
      * Finishes the test
      */
     fun finish() {
+        _callback.isEnabled = false
         val result = TestResult()
 
         runBlocking {
             launch {
-                TestResultDatabase.getDB(requireContext()).dao.upsertResult(TestResult(_points, getMaxPoints(), TestResult.fromDate(LocalDateTime.now()), points >= _minimumPoints))
+                TestResultDatabase.getDB(requireContext()).dao.upsertResult(TestResult(_points, getMaxPoints(), TestResult.fromDate(LocalDateTime.now()), isSuccessful))
             }
         }
 
         childFragmentManager.beginTransaction().replace(R.id.testholder, result).commit()
     }
+
+    val isSuccessful get() = points >= _minimumPoints
 }

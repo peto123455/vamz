@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Autoškola</string>
-    <string name="action_settings">Nastavenia</string>
+    <string name="app_info">O Aplikácií</string>
     <!-- Strings used for fragments for navigation -->
     <string name="main_page_label">@string/app_name</string>
     <string name="question_label">Skúška</string>
@@ -8,14 +8,6 @@
     <string name="previous">Previous</string>
     <string name="result">Výsledok</string>
     <string name="button_description">Tlačidlo odvovede</string>
-
-    <string name="lorem_question">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-    </string>
-
-    <string name="lorem_answer">
-        Lorem ipsum dolor sit amet.
-    </string>
     <string name="lorem_itemname">Výsledok 100/100</string>
     <string name="lorem_date">11.6.2023 17:00</string>
     <string name="nextQuestion">Ďalšia otázka</string>
@@ -24,4 +16,13 @@
     <string name="result_image_description">Obrázok výsledku</string>
     <string name="new_test">Nový test</string>
     <string name="test_image_description">Obrázok k otázke</string>
+    <string name="about_app">
+        Aplikácia je určená hlavne na prípravu študentov.
+        Obsahuje oficiálny náhodne generovaný test.
+        Možnosť zamerať sa na ľubovolnú kategóriu.
+        Na úspešne zvládnutie testu je potrebné žískať,
+        aspoň 90%, čiže na oficiálnom test aspoň 90 bodov.
+        Aplikácia obsahuje oficiálne otázky, v oficiálnom
+        usporiadaní, počtu otázok.
+    </string>
 </resources>
