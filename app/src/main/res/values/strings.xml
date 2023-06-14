@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Autoškola</string>
+    <string name="welcome">Autoškola</string>
+    <string name="app_name">Autoškola - Testy 2023</string>
     <string name="app_info">O Aplikácií</string>
     <!-- Strings used for fragments for navigation -->
     <string name="main_page_label">@string/app_name</string>
@@ -26,4 +27,75 @@
         usporiadaní, počtu otázok.
     </string>
     <string name="image_jiscd_description">Obrázok JISCD</string>
-</resources>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="tests">Testy 2023</string>
+    <string name="basic_definitions_button">Základné pojmy</string>
+    <string name="title_activity_basic_definitions">BasicDefinitions</string>
+    <string name="large_text">
+        <b>Vymedzenie základných pojmov</b>\n\n
+
+        (1) <b>Cestnou premávkou</b> na účely tohto zákona sa rozumie užívanie <b>diaľnic, ciest, miestnych komunikácií a účelových komunikácií</b> (ďalej len „cesta“) vodičmi vozidiel a chodcami.\n\n\n
+
+        (2) <b>Na účely tohto zákona sa ďalej rozumie</b>\n\n
+
+        a) <b>autobusom</b> motorové vozidlo na dopravu osôb, ktoré má okrem miesta pre vodiča viac ako osem miest na sedenie,\n\n
+
+        b) <b>dať prednosť v jazde</b> povinnosť účastníka cestnej premávky počínať si tak, aby ten, kto má prednosť v jazde, nemusel náhle zmeniť smer alebo rýchlosť jazdy,\n\n
+
+        c) <b>držiteľom vozidla</b> osoba zapísaná v osvedčení o evidencii časť I a časť II ako držiteľ osvedčenia, alebo takáto osoba zapísaná v osvedčení o evidencii vydanom v cudzine,\n\n
+
+        d) <b>električkovým koľajovým pásom</b> časť cesty určená predovšetkým na premávku električky,\n\n
+
+        e) <b>hranicou križovatky</b> miesto, ktoré tvorí kolmica na os vozovky v mieste, kde sa pre križovatku začína zakrivenie vozovky,\n\n
+
+        f) <b>chodcom</b> účastník cestnej premávky pohybujúci sa pešo; chodcom je aj osoba, ktorá napríklad tlačí alebo ťahá sánky, detský kočík, vozík pre osoby so zdravotným postihnutím alebo ručný vozík s celkovou šírkou nepresahujúcou 600 mm, osoba, ktorá sa pohybuje na lyžiach, korčuliach, kolobežke bez pomocného motorčeka, skejtborde alebo obdobnom športovom vybavení, pomocou mechanického alebo elektrického vozíka pre osoby so zdravotným postihnutím, a osoba, ktorá tlačí bicykel, motocykel alebo kolobežku s pomocným motorčekom, alebo vedie zviera,\n\n
+
+        g) <b>chodníkom</b> komunikácia alebo časť cesty určená pre chodcov, ktorá je spravidla oddelená od vozovky výškovo alebo iným spôsobom,\n\n
+
+        h) <b>jazdnou súpravou</b> súprava zložená z jedného alebo z viacerých motorových vozidiel a z jedného alebo viacerých prípojných vozidiel,\n\n
+
+        i) <b>krajnicou</b> časť cesty od kraja vozovky po kraj cesty,\n\n
+
+        j) <b>križovatkou</b> miesto, v ktorom sa cesty pretínajú alebo spájajú,\n\n
+
+        k) <b>križovatkou s riadenou premávkou</b> križovatka, na ktorej je premávka riadená dopravnými zariadeniami alebo príslušníkom Policajného zboru (ďalej len „policajt“), prípadne inou oprávnenou osobou,\n\n
+
+        l) <b>motorovým vozidlom</b> nekoľajové vozidlo poháňané vlastným motorom s výnimkou prípadu podľa písmena f) a trolejbus,\n\n
+
+        m) <b>nemotorovým vozidlom</b> prípojné vozidlo, vozidlo pohybujúce sa pomocou ľudskej sily alebo zvieracej sily s výnimkou prípadov podľa písmena f), automatizované doručovacie vozidlo,3a), kolobežka s pomocným motorčekom a bicykel vybavený pomocným motorčekom so zdvihovým objemom valcov nepresahujúcim 50 cm3 s konštrukčnou rýchlosťou neprevyšujúcou 25 km/h alebo bicykel vybavený pomocným elektrickým motorčekom s trvalým menovitým výkonom do 0,25 kW, ktorého výkon sa progresívne znižuje a nakoniec sa preruší, keď vozidlo dosiahne rýchlosť 25 km/h alebo keď vodič prestane šliapať do pedálov,\n\n
+
+        n) <b>neobmedzením</b> povinnosť účastníka cestnej premávky počínať si tak, aby inému účastníkovi cestnej premávky neprekážal,\n\n
+
+        o) <b>neohrozením</b> povinnosť účastníka cestnej premávky počínať si tak, aby inému účastníkovi cestnej premávky nevzniklo nijaké nebezpečenstvo,\n\n
+
+        p) <b>orgánom Policajného zboru</b> útvar Policajného zboru zriadený podľa osobitného predpisu,\n\n
+
+        q) <b>pobytom</b> trvalý pobyt občana Slovenskej republiky, prechodný pobyt občana Slovenskej republiky trvalo žijúceho v zahraničí, trvalý pobyt cudzinca alebo prechodný pobyt cudzinca na území Slovenskej republiky,\n\n
+
+        r) <b>prekážkou cestnej premávky</b> všetko, čo môže ohroziť alebo obmedziť jazdu vozidiel a pohyb chodcov,\n\n
+
+        s) <b>samovyvažovacím vozidlom</b> vozidlo založené na vnútornej nestabilnej rovnováhe, ktoré na zachovanie svojej rovnováhy potrebuje pomocný riadiaci systém,\n\n
+
+        t) <b>státím</b> uvedenie vozidla do pokoja na dlhšie, ako je čas dovolený na zastavenie,\n\n
+
+        u) <b>účastníkom cestnej premávky</b> osoba, ktorá sa priamo zúčastňuje cestnej premávky,\n\n
+
+        v) <b>vodičom</b> osoba, ktorá vedie vozidlo, alebo osoba, ktorá vykonáva dohľad nad vozidlom, ktoré na jazdu využíva automatizovaný systém riadenia,\n\n
+
+        w) <b>vozidlom</b> motorové vozidlo, nemotorové vozidlo a električka,\n\n
+
+        x) <b>vozovkou</b> spevnená časť cesty určená predovšetkým na premávku motorových vozidiel,\n\n
+
+        y) <b>zastavením</b> uvedenie vozidla do pokoja na čas nevyhnutne potrebný na urýchlené nastúpenie alebo na vystúpenie prepravovaných osôb alebo na urýchlené naloženie alebo na zloženie nákladu,\n\n
+
+        z) <b>zastavením vozidla</b> prerušenie jazdy z dôvodu nezávislého od vôle vodiča,\n\n
+
+        aa) <b>zníženou viditeľnosťou</b> viditeľnosť, pri ktorej sa účastníci cestnej premávky dostatočne zreteľne navzájom nevidia, ani keď nevidia predmety na ceste, najmä od súmraku do svitania, za hmly, sneženia, dažďa a v tuneli,\n\n
+
+        ab) <b>zvláštnym motorovým vozidlom</b> motorové vozidlo vyrobené na iné účely než na prevádzku na cestách, ktoré po splnení ustanovených podmienok možno prevádzkovať v cestnej premávke; ide najmä o poľnohospodárske traktory a lesné traktory, samohybné pracovné, poľnohospodárske, lesné alebo stavebné stroje.
+            </string>
+        </resources>

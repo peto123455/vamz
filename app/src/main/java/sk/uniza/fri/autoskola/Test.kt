@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.OnBackPressedDispatcher
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -60,13 +59,7 @@ class Test : Fragment() {
 
         _callback = object: OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                AlertDialog.Builder(context)
-                    .setMessage("Naozaj chceš ukončiť test?")
-                    .setCancelable(false)
-                    .setPositiveButton("Áno",
-                        DialogInterface.OnClickListener { dialog, id -> handleHackButton() })
-                    .setNegativeButton("Nie", null)
-                    .show()
+                backButton()
             }
         }
 
@@ -75,7 +68,17 @@ class Test : Fragment() {
         return binding.root
     }
 
-    private fun handleHackButton() {
+    fun backButton() {
+        AlertDialog.Builder(context)
+            .setMessage("Naozaj chceš ukončiť test?")
+            .setCancelable(false)
+            .setPositiveButton("Áno",
+                DialogInterface.OnClickListener { _, _ -> handleBackButton() })
+            .setNegativeButton("Nie", null)
+            .show()
+    }
+
+    private fun handleBackButton() {
         finish()
         _callback.isEnabled = false
     }
@@ -123,6 +126,7 @@ class Test : Fragment() {
      * Finishes the test
      */
     fun finish() {
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         _callback.isEnabled = false
         val result = TestResult()
 

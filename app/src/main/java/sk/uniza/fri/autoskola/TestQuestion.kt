@@ -23,6 +23,8 @@ class TestQuestion : Fragment() {
     private var answered = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
         _binding = DataBindingUtil.inflate(inflater,
             R.layout.test_question, container, false)
 

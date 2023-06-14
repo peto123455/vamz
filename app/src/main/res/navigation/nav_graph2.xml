@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="sk.uniza.fri.autoskola.MainMenuFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_FirstFragment_to_about2"
+            app:destination="@id/about2" />
+    </fragment>
+    <fragment
+        android:id="@+id/about2"
+        android:name="sk.uniza.fri.autoskola.About"
+        android:label="@string/app_info" >
+        <action
+            android:id="@+id/action_about2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
