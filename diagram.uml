@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="125.0" y="1296.0">sk.uniza.fri.autoskola.data.Questions.Question</node>
+    <node x="683.0" y="1070.0">sk.uniza.fri.autoskola.TestQuestion</node>
+    <node x="446.0" y="149.0">sk.uniza.fri.autoskola.data.TestResultDatabase</node>
+    <node x="906.0" y="774.0">sk.uniza.fri.autoskola.RecyclerAdapter</node>
+    <node x="163.0" y="495.0">sk.uniza.fri.autoskola.MainPageResults</node>
+    <node x="169.5" y="1114.0">sk.uniza.fri.autoskola.data.Questions</node>
+    <node x="803.0" y="1446.0">sk.uniza.fri.autoskola.About</node>
+    <node x="543.0" y="495.0">sk.uniza.fri.autoskola.MainPage</node>
+    <node x="419.5" y="58.0">sk.uniza.fri.autoskola.data.TestResultDatabase.Companion</node>
+    <node x="1301.5" y="764.0">sk.uniza.fri.autoskola.RecyclerAdapter.ViewHolder</node>
+    <node x="683.0" y="306.0">sk.uniza.fri.autoskola.TestResult</node>
+    <node x="543.0" y="697.0">sk.uniza.fri.autoskola.Test</node>
+    <node x="152.0" y="306.0">sk.uniza.fri.autoskola.data.TestResultDao</node>
+    <node x="-126.5" y="1093.0">sk.uniza.fri.autoskola.data.Questions.Category</node>
+    <node x="280.5" y="753.0">sk.uniza.fri.autoskola.data.TestResult</node>
+    <node x="916.0" y="450.0">sk.uniza.fri.autoskola.MainActivity</node>
+    <node x="227.5" y="966.0">sk.uniza.fri.autoskola.data.TestResult.Companion</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sk.uniza.fri.autoskola.data.TestResultDatabase.Companion" target="sk.uniza.fri.autoskola.data.TestResultDatabase" relationship="INNER_CLASS">
+      <point x="0.0" y="27.0" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="sk.uniza.fri.autoskola.data.Questions.Question" target="sk.uniza.fri.autoskola.data.Questions" relationship="INNER_CLASS">
+      <point x="-172.0" y="0.0" />
+      <point x="99.0" y="1401.0" />
+      <point x="99.0" y="1176.0" />
+      <point x="-127.5" y="0.0" />
+    </edge>
+    <edge source="sk.uniza.fri.autoskola.data.Questions.Category" target="sk.uniza.fri.autoskola.data.Questions" relationship="INNER_CLASS">
+      <point x="99.5" y="0.0" />
+      <point x="-127.5" y="0.0" />
+    </edge>
+    <edge source="sk.uniza.fri.autoskola.data.TestResult.Companion" target="sk.uniza.fri.autoskola.data.TestResult" relationship="INNER_CLASS">
+      <point x="60.0" y="-38.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="sk.uniza.fri.autoskola.RecyclerAdapter.ViewHolder" target="sk.uniza.fri.autoskola.RecyclerAdapter" relationship="INNER_CLASS">
+      <point x="-98.5" y="0.0" />
+      <point x="171.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.3580163043478261" showDependencies="false" x="435.0" y="794.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

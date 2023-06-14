@@ -6,7 +6,7 @@ import java.io.InputStreamReader
 import kotlin.random.Random
 
 
-class Questions() {
+class Questions {
 
     data class Category(val name: String, val min: Int, val max: Int, val points: Int) {
         private val _questions: MutableList<Question> = ArrayList()
@@ -29,18 +29,29 @@ class Questions() {
         try {
             val inputStreamReader = InputStreamReader(context.assets.open("data.json"))
 
-            var root = JsonParser().parse(inputStreamReader).asJsonObject
+            val root = JsonParser().parse(inputStreamReader).asJsonObject
 
             for (category in root.entrySet()) {
                 val categoryTmp = category.value.asJsonObject
-                val categoryObj = Category(categoryTmp.get("title").asString, categoryTmp.get("min").asInt, categoryTmp.get("max").asInt, categoryTmp.get("points").asInt)
+                val categoryObj = Category(categoryTmp.get("title").asString,
+                    categoryTmp.get("min").asInt,
+                    categoryTmp.get("max").asInt,
+                    categoryTmp.get("points").asInt)
 
                 _categories.add(categoryObj)
 
                 for (question in categoryTmp.get("questions").asJsonObject.entrySet()) {
                     val questionTmp = question.value.asJsonObject
 
-                    categoryObj.questions.add(Question(questionTmp.get("question").asString, questionTmp.get("right_answer").asInt, questionTmp.get("image").asString, questionTmp.get("answer1").asString, questionTmp.get("answer2").asString, questionTmp.get("answer3").asString, categoryObj))
+                    categoryObj.questions.add(
+                        Question(questionTmp.get("question").asString,
+                            questionTmp.get("right_answer").asInt,
+                            questionTmp.get("image").asString,
+                            questionTmp.get("answer1").asString,
+                            questionTmp.get("answer2").asString,
+                            questionTmp.get("answer3").asString,
+                            categoryObj
+                        ))
                 }
             }
 
